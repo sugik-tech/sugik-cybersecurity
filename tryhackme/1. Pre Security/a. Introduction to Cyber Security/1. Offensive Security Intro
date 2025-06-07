@@ -1,0 +1,41 @@
+## 🛡️ **Offensive Security Intro – Ringkasan Materi**
+
+### 📘 **1. Apa itu Offensive Security?**
+
+*Offensive Security* adalah pendekatan dalam keamanan siber yang meniru tindakan peretas untuk mengidentifikasi dan mengeksploitasi kerentanan dalam sistem komputer, aplikasi, atau jaringan. Tujuannya adalah untuk memahami taktik peretas dan meningkatkan pertahanan sistem.
+
+---
+
+### 🧪 **2. Melakukan Peretasan Pertama Anda**
+
+#### 🖥️ **a. Memulai Mesin Virtual**
+
+TryHackMe menyediakan mesin virtual dengan aplikasi bank palsu bernama *FakeBank*. Anda dapat memulai mesin ini dengan mengklik tombol “Start Machine” di pojok kanan atas halaman tugas. Setelah mesin berjalan, layar akan terbagi dua, menampilkan konten di sebelah kiri dan mesin virtual di sebelah kanan.([iritt.medium.com][1])
+
+#### 🔍 **b. Menemukan Halaman Tersembunyi dengan Gobuster**
+
+Gunakan alat baris perintah **Gobuster** untuk melakukan *brute-force* terhadap situs web *FakeBank* dan menemukan direktori atau halaman tersembunyi.([medium.com][2])
+
+```bash
+gobuster -u http://fakebank.thm -w wordlist.txt dir
+```
+
+* `-u`: Menentukan URL target.
+* `-w`: Menentukan daftar kata (*wordlist*) untuk dicoba.([iritt.medium.com][1])
+
+Perintah ini akan mencoba mengakses berbagai halaman berdasarkan daftar kata yang diberikan dan menampilkan halaman yang berhasil diakses (status 200).
+
+#### 💸 **c. Mengeksploitasi Halaman Transfer Bank**
+
+Setelah menemukan halaman tersembunyi seperti `/bank-transfer`, Anda dapat mengaksesnya melalui browser di mesin virtual. Halaman ini memungkinkan transfer uang antar akun. Sebagai latihan, coba transfer \$2000 dari akun 2276 ke akun Anda (nomor akun 8881). Jika berhasil, saldo akun Anda akan bertambah.([iritt.medium.com][1])
+
+---
+
+### 🧠 **3. Karier dalam Keamanan Siber**
+
+Setelah menyelesaikan latihan ini, Anda telah mendapatkan gambaran tentang pekerjaan seorang *ethical hacker*. Tugas mereka adalah mengidentifikasi celah keamanan dalam sistem dan melaporkannya agar dapat diperbaiki sebelum dimanfaatkan oleh pihak yang tidak bertanggung jawab.
+
+Untuk melanjutkan pembelajaran, TryHackMe merekomendasikan room berikut:
+
+* **Web Enumeration**: Mempelajari metode enumerasi situs web menggunakan alat seperti Gobuster, Nikto, dan WPScan.
+* **Become a Hacker**: Mempelajari bagaimana TryHackMe dapat membantu Anda menjadi seorang peretas (*hacker*).([iritt.medium.com][1])
