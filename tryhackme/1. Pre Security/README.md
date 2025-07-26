@@ -1,1 +1,1 @@
-berisi rangkuman hal hal yang ada di halam Pre Security
+Rangkuman ini disusun dengan bantuan AI (ChatGPT) setelah saya menyelesaikan room ini di TryHackMe. Tujuannya adalah untuk merapikan dan menyederhanakan materi agar lebih mudah dipahami dan diingat.
